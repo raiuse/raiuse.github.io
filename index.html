@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Responsive professional website and games area">
+    <title>Loop Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="matrix-rain" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="홈으로 이동"><span>01</span> LOOP.PORTFOLIO</a>
+      <nav aria-label="주요 메뉴">
+        <ul class="site-nav">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#games">Games</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="home" class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot"></span> SYSTEM / READY</p>
+          <h1 id="hero-title">Build.<br>Observe.<br><em>Improve.</em></h1>
+          <p>확인 가능한 정보와 검증 가능한 경험을 담는 반응형 웹사이트입니다.</p>
+          <div class="hero-actions">
+            <a class="button" href="#games">Games 열기 <span>↘</span></a>
+            <a class="text-link" href="#about">시스템 로그 보기</a>
+          </div>
+        </div>
+        <aside class="terminal-card" aria-label="현재 시스템 상태">
+          <p class="terminal-title">// STATUS</p>
+          <dl>
+            <div><dt>MODE</dt><dd>LOOP ENGINEERING</dd></div>
+            <div><dt>THEME</dt><dd>MATRIX / NEON</dd></div>
+            <div><dt>INPUT</dt><dd>KEYBOARD + TOUCH</dd></div>
+          </dl>
+        </aside>
+      </section>
+      <section id="about" class="content-section" aria-labelledby="about-title">
+        <h2 id="about-title">About</h2>
+        <p>공개할 프로필 정보는 확인 후 추가합니다.</p>
+      </section>
+      <section id="contact" class="content-section" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
+        <p>연락처와 외부 링크는 공개 승인 후 추가합니다.</p>
+      </section>
+      <section id="games" class="content-section games-section" aria-labelledby="games-title">
+        <p class="eyebrow">GAMES / STANDBY</p>
+        <h2 id="games-title">Snake</h2>
+        <p>루프를 오래 유지하세요. 음식 신호를 수집하고, 경계와 자신의 흔적을 피하세요.</p>
+        <div class="game-layout">
+          <div class="game-frame">
+            <canvas id="game-board" width="400" height="400" aria-label="Snake game board" role="img"></canvas>
+            <p id="game-status" class="game-status" aria-live="polite">Start를 눌러 게임을 시작하세요.</p>
+          </div>
+          <div class="game-panel">
+            <div class="score-grid" aria-label="점수">
+              <div><span>SCORE</span><strong id="score">00</strong></div>
+              <div><span>BEST</span><strong id="best-score">00</strong></div>
+            </div>
+            <div class="game-actions">
+              <button id="start-game" type="button">Start <span>↘</span></button>
+              <button id="pause-game" type="button">Pause</button>
+              <button id="restart-game" type="button">Restart</button>
+            </div>
+            <p class="control-copy">Keyboard: Arrow keys or WASD<br>Touch: use the controls or swipe the board</p>
+            <div class="touch-controls" aria-label="게임 방향 조작">
+              <button data-direction="up" type="button" aria-label="위로">↑</button>
+              <button data-direction="left" type="button" aria-label="왼쪽">←</button>
+              <button data-direction="down" type="button" aria-label="아래로">↓</button>
+              <button data-direction="right" type="button" aria-label="오른쪽">→</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>© <span id="year"></span> Loop Portfolio</footer>
+    <script src="script.js"></script>
+  </body>
+</html>
