@@ -113,7 +113,7 @@
       <section id="games" class="content-section games-section" aria-labelledby="games-title">
         <p class="eyebrow">GAMES / ACTIVE</p>
         <h2 id="games-title">Snake Game</h2>
-        <p>방향키·WASD·모바일 버튼으로 조작하는 지렁이 게임입니다.</p>
+        <p>방향키·WASD·모바일 버튼으로 조작하는 지렁이 게임입니다. 장애물과 센티널을 피하고, 충전된 감속 펄스로 위기를 돌파하세요.</p>
         <div class="game-layout">
           <div class="game-frame">
             <canvas id="game-board" width="400" height="400" aria-label="Snake game board" role="img"></canvas>
@@ -124,12 +124,21 @@
               <div><span>SCORE</span><strong id="score">00</strong></div>
               <div><span>BEST</span><strong id="best-score">00</strong></div>
             </div>
+            <div class="mission-card" aria-label="게임 미션 정보">
+              <p class="mission-title">// SECTOR 07</p>
+              <dl>
+                <div><dt>THREAT</dt><dd>SENTINEL</dd></div>
+                <div><dt>OBJECTIVE</dt><dd>KEEP LOOP ALIVE</dd></div>
+                <div><dt>PULSE</dt><dd id="pulse-state">CHARGE 0 / 5</dd></div>
+              </dl>
+            </div>
             <div class="game-actions">
               <button id="start-game" type="button">Start <span>↘</span></button>
               <button id="pause-game" type="button">Pause</button>
+              <button id="pulse-game" type="button" disabled>Pulse <span>Shift</span></button>
               <button id="restart-game" type="button">Restart</button>
             </div>
-            <p class="control-copy">Keyboard: Arrow keys or WASD<br>Touch: use the controls or swipe the board</p>
+            <p class="control-copy">Keyboard: Arrow keys or WASD · Shift: Pulse<br>Touch: use the controls or swipe the board<br>Pulse charges every 5 points and slows the signal for 3.5 seconds.</p>
             <div class="touch-controls" aria-label="게임 방향 조작">
               <button data-direction="up" type="button" aria-label="위로">↑</button>
               <button data-direction="left" type="button" aria-label="왼쪽">←</button>
